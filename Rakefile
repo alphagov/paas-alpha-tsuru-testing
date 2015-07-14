@@ -68,12 +68,6 @@ namespace :integration do
   end
 end
 
-namespace :endtoend do
-  RSpec::Core::RakeTask.new(:all) do |t|
-    t.pattern = "spec/endtoend/*_spec.rb"
-  end
-end
-
 # Run all tasks
-task :default => [ "integration:all", "endtoend:all" ]
+task :default => [ "integration:all" ]
 
